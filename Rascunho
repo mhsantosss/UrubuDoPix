@@ -1,0 +1,22 @@
+1 - o usuário deverá depositar dinheiro
+2 - o dinheiro deverá render 33,33% por dia
+3 - após 30 dias o usuário terá 100% de investimento
+
+ex: usuário deposita 200 reais e após 30 dias terá 2000
+
+
+classe usuario 
+    -id
+    -nome
+
+    criarUsuario()
+
+classe transacao
+    [deposito, lucro, saque] (no beckend para armazenar no banco)
+    -tipo 
+    -valor
+
+    adicionarDeposito()
+    consultarSaldo()
+    adicionarLucro()
+    saque()
