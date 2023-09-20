@@ -1,0 +1,14 @@
+version: '3.8'
+services:
+  sql-server:
+    image: meu-sqlserver:latest  # Nome da imagem que será construída a partir do Dockerfile
+    build:
+      context: ./  # Diretório onde o Dockerfile está localizado
+      dockerfile: Dockerfile  # Nome do Dockerfile
+    environment:
+      SA_PASSWORD: Urubu@123
+      ACCEPT_EULA: Y
+    ports:
+      - "1433:1433"
+    volumes:
+      - ./script.sql:/docker-entrypoint-initdb.d/script.sql
